@@ -24,6 +24,7 @@ private:
     auto message = std_msgs::msg::String();
     message.data = "hello";
     RCLCPP_INFO(this->get_logger(), "test publish");
+    RCLCPP_INFO(this->get_logger(), "test publish2");
     pub_->publish(message);
   }
   rclcpp::Publisher<std_msgs::msg::String>::SharedPtr pub_;
